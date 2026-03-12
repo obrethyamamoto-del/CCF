@@ -14,7 +14,7 @@ export const About = () => {
 
   return (
     <section id="about" className="section-padding overflow-hidden bg-black relative">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Main Content */}
           <motion.div
