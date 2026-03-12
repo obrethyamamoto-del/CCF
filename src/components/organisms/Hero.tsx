@@ -29,8 +29,9 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <Typography variant="caption" className="mb-4 text-brand-pink drop-shadow-md font-black uppercase tracking-[0.2em]">
-            16 - 17 Nisan 2026 • AKDENİZ ÜNİVERSİTESİ KAMPÜSÜ
+          <Typography variant="caption" className="mb-4 text-brand-pink drop-shadow-md font-black uppercase tracking-[0.2em] flex flex-col items-center gap-1">
+            <span>16 - 17 Nisan 2026</span>
+            <span>AKDENİZ ÜNİVERSİTESİ KAMPÜSÜ</span>
           </Typography>
           <Typography variant="title" className="mb-6 max-w-4xl mx-auto text-white drop-shadow-2xl !text-4xl md:!text-7xl lg:!text-8xl !leading-[1.1]">
             Geleceği <span className="gradient-text">Kahve Kokusuyla</span> Birlikte Keşfet.
