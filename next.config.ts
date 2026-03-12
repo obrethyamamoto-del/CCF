@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isGithubActions ? '/campusfest' : '',
+  basePath: isGithubActions ? '/CCF' : '',
 };
 
 export default nextConfig;
