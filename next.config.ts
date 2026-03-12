@@ -1,13 +1,11 @@
 import type { NextConfig } from "next";
 
-const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
-
 const nextConfig: NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  basePath: isGithubActions ? '/CCF' : '',
+  basePath: '/CCF',
 };
 
 export default nextConfig;

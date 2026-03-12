@@ -12,7 +12,7 @@ export const Hero = () => {
       {/* Background Image with optimized dark overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="hero-bg.png"
+          src="/hero-bg.png"
           alt="Festival Background"
           fill
           className="object-cover opacity-50"
