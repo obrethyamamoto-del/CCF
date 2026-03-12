@@ -28,7 +28,7 @@ export const About = () => {
               Kampüste <br className="hidden md:block" /> <span className="gradient-text">Yeni Bir Kültür</span> Doğuyor.
             </Typography>
             <Typography variant="body" className="max-w-xl text-lg opacity-60 font-light leading-relaxed mb-6">
-              Campus Coffee Fest, sadece bir kahve tadımı değil, gençlerin bir araya geldiği, markaların en yeni deneyimlerini sunduğu ve sanatın her köşede hissedildiği modern bir platformdur.
+              {"Campus Coffee Fest, sadece bir kahve tadımı değil, gençlerin bir araya geldiği, markaların en yeni deneyimlerini sunduğu ve sanatın her köşede hissedildiği modern bir platformdur."}
             </Typography>
             <Typography variant="body" className="max-w-xl text-lg opacity-60 font-light leading-relaxed">
               2026 yılında, sınırları zorlayan bir organizasyonla kampüsü canlandırmaya hazırız.

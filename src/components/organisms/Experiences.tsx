@@ -49,7 +49,7 @@ export const Experiences = () => {
               Seni <span className="gradient-text">Neler Bekliyor?</span>
             </Typography>
             <Typography variant="body" className="max-w-3xl mx-auto text-white/50 text-lg md:text-2xl font-light">
-              Festivalin her metrekaresinde yeni bir keşif, her bardağında farklı bir tutku saklı. Alışılmışın dışına çıkmaya hazır ol.
+              {"Festivalin her metrekaresinde yeni bir keşif, her bardağında farklı bir tutku saklı. Alışılmışın dışına çıkmaya hazır ol."}
             </Typography>
           </motion.div>
         </div>

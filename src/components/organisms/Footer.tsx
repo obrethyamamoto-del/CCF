@@ -36,7 +36,7 @@ export const Footer = () => {
               </div>
             </div>
             <Typography variant="body" className="max-w-md text-white/50 mb-8 leading-relaxed">
-              Türkiye'nin en enerjik gençlik ve kahve festivali. 16-17 Nisan tarihlerinde kampüsün kalbinde buluşuyoruz. Sanat, müzik ve kahveyle dolu iki gün sizi bekliyor.
+              {"Türkiye'nin en enerjik gençlik ve kahve festivali. 16-17 Nisan tarihlerinde kampüsün kalbinde buluşuyoruz. Sanat, müzik ve kahveyle dolu iki gün sizi bekliyor."}
             </Typography>
             <div className="flex gap-4">
               {socialLinks.map((social, i) => (
