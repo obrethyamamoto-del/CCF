@@ -36,7 +36,7 @@ export const Hero = () => {
             Geleceği <span className="gradient-text">Kahve Kokusuyla</span> Birlikte Keşfet.
           </Typography>
           <Typography variant="subtitle" className="mb-10 max-w-2xl mx-auto text-white/80 drop-shadow-md font-medium">
-            {"Türkiye'nin en büyük gençlik ve kahve festivali geri dönüyor. İki gün boyunca kesintisiz deneyim, müzik ve kültür seni bekliyor."}
+            Türkiye&apos;nin en büyük gençlik ve kahve festivali geri dönüyor. İki gün boyunca kesintisiz deneyim, müzik ve kültür seni bekliyor.
           </Typography>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

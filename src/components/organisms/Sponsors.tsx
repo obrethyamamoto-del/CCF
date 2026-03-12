@@ -35,7 +35,7 @@ export const Sponsors = () => {
               Gücümüze <span className="gradient-text">Güç Katanlar</span>
             </Typography>
             <Typography variant="body" className="max-w-xl mx-auto text-white/30 text-sm md:text-base">
-              {"Campus Coffee Fest'in gerçekleşmesini sağlayan değerli markalar ve çözüm ortaklarımız."}
+              Campus Coffee Fest&apos;in gerçekleşmesini sağlayan değerli markalar ve çözüm ortaklarımız.
             </Typography>
           </motion.div>
         </div>
