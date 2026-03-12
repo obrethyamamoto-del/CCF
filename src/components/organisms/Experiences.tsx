@@ -10,22 +10,22 @@ export const Experiences = () => {
     { 
       title: "Kahve Deneyim Alanları", 
       description: "Dünyanın dört bir yanından gelen seçkin çekirdeklerin, usta baristaların ellerinde sanat eserine dönüştüğü tadım noktaları. En taze kavrumlarla hazırlanan özel seçkileri keşfedin.",
-      image: "/exp-1.png" 
+      image: "/CCF/exp-1.png" 
     },
     { 
       title: "Workshop Akademisi", 
       description: "Demleme tekniklerinden latte art inceliklerine kadar kahve dünyasının mutfağına profesyonellerle birlikte adım atın. Teorik bilgiyi pratik uygulama ile birleştirin.",
-      image: "/exp-2.png" 
+      image: "/CCF/exp-2.png" 
     },
     { 
       title: "Müzik & Sosyal Alan", 
       description: "Kahve kokusuna karışan canlı DJ performansları ve modern sanat etkinlikleriyle kampüsün kalbi burada atacak. Arkadaşlarınızla festivalin ritmini yakalayın.",
-      image: "/exp-3.png" 
+      image: "/CCF/exp-3.png" 
     },
     { 
       title: "Marka Deneyim Standları", 
       description: "Sektörün dev markalarının en yeni ürünlerini, interaktif teknolojiler ve sürpriz hediyelerle keşfetme fırsatı. Markaların en yeni koleksiyonlarıyla tanışın.",
-      image: "/exp-4.png" 
+      image: "/CCF/exp-4.png" 
     },
   ];
 
