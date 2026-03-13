@@ -26,13 +26,13 @@ export const Contact = () => {
               </Typography>
               
               <div className="space-y-6">
-                <a href="mailto:info@campusfest.com" className="flex items-center gap-4 hover:translate-x-2 transition-transform">
+                <a href="mailto:info@campuscoffeefest.com" className="flex items-center gap-4 hover:translate-x-2 transition-transform">
                   <div className="p-3 bg-white/10 rounded-full"><Mail size={20} /></div>
-                  <span className="font-medium">info@campusfest.com</span>
+                  <span className="font-medium">info@campuscoffeefest.com</span>
                 </a>
-                <a href="tel:+90555555555" className="flex items-center gap-4 hover:translate-x-2 transition-transform">
+                <a href="tel:+905549574646" className="flex items-center gap-4 hover:translate-x-2 transition-transform">
                   <div className="p-3 bg-white/10 rounded-full"><Phone size={20} /></div>
-                  <span className="font-medium">+90 (555) 555 55 55</span>
+                  <span className="font-medium">0554 957 46 46</span>
                 </a>
                 <a href="https://instagram.com" className="flex items-center gap-4 hover:translate-x-2 transition-transform">
                   <div className="p-3 bg-white/10 rounded-full"><Instagram size={20} /></div>
@@ -50,25 +50,35 @@ export const Contact = () => {
               Mesajınızı <span className="gradient-text">Bırakın</span>
             </Typography>
             
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form 
+              action="https://formspree.io/f/xpqylprr" 
+              method="POST"
+              className="space-y-4"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input 
+                  required
+                  name="name"
                   type="text" 
                   placeholder="Adınız Soyadınız" 
                   className="w-full px-6 py-4 rounded-2xl bg-foreground/5 border border-foreground/10 focus:border-brand-pink outline-none transition-colors"
                 />
                 <input 
+                  required
+                  name="email"
                   type="email" 
                   placeholder="E-posta Adresiniz" 
                   className="w-full px-6 py-4 rounded-2xl bg-foreground/5 border border-foreground/10 focus:border-brand-pink outline-none transition-colors"
                 />
               </div>
               <textarea 
+                required
+                name="message"
                 placeholder="Mesajınız..." 
                 rows={4}
                 className="w-full px-6 py-4 rounded-2xl bg-foreground/5 border border-foreground/10 focus:border-brand-pink outline-none transition-colors resize-none"
               ></textarea>
-              <Button variant="secondary" className="w-full gap-2 py-4">
+              <Button type="submit" variant="secondary" className="w-full gap-2 py-4">
                 Gönder <Send size={18} />
               </Button>
             </form>

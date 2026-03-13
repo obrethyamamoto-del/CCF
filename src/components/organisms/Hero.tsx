@@ -1,12 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Typography } from "../atoms/Typography";
 import { Button } from "../atoms/Button";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { JoinModal } from "./JoinModal";
 
 export const Hero = () => {
+  const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
+
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image with optimized dark overlay */}
@@ -41,7 +44,12 @@ export const Hero = () => {
           </Typography>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button variant="secondary" size="lg" className="w-full sm:w-auto shadow-2xl">
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="w-full sm:w-auto shadow-2xl"
+              onClick={() => setIsJoinModalOpen(true)}
+            >
               Katıl
             </Button>
             <Button 
@@ -55,6 +63,8 @@ export const Hero = () => {
           </div>
         </motion.div>
       </div>
+
+      <JoinModal isOpen={isJoinModalOpen} onClose={() => setIsJoinModalOpen(false)} />
 
       {/* Decorative Orbs */}
       <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-brand-pink/20 rounded-full blur-[150px] animate-float opacity-40" />

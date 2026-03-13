@@ -1,8 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Typography } from "../atoms/Typography";
 import { motion } from "framer-motion";
+import { Button } from "../atoms/Button";
+import { SponsorModal } from "./SponsorModal";
 
 const SponsorCard = ({ name }: { name: string }) => {
   return (
@@ -18,6 +20,7 @@ const SponsorCard = ({ name }: { name: string }) => {
 };
 
 export const Sponsors = () => {
+  const [isSponsorModalOpen, setIsSponsorModalOpen] = useState(false);
   const sponsorsTop = ["Sponsor Alpha", "Sponsor Beta", "Sponsor Gamma", "Sponsor Delta", "Sponsor Epsilon", "Sponsor Zeta"];
   const sponsorsBottom = ["Partner One", "Partner Two", "Partner Three", "Partner Four", "Partner Five", "Partner Six"];
 
@@ -30,13 +33,20 @@ export const Sponsors = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Typography variant="caption" className="mb-4 tracking-[0.4em] opacity-50 uppercase text-xs">DESTEKÇİLERİMİZ</Typography>
+            <Typography variant="caption" className="mb-4 tracking-[0.3em] text-brand-pink font-bold uppercase">DESTEKÇİLERİMİZ</Typography>
             <Typography variant="title" className="text-4xl md:text-6xl mb-6">
               Gücümüze <span className="gradient-text">Güç Katanlar</span>
             </Typography>
-            <Typography variant="body" className="max-w-xl mx-auto text-white/30 text-sm md:text-base">
+            <Typography variant="body" className="max-w-xl mx-auto text-white/30 text-sm md:text-base mb-8">
               Campus Coffee Fest&apos;in gerçekleşmesini sağlayan değerli markalar ve çözüm ortaklarımız.
             </Typography>
+            <Button 
+              variant="outline" 
+              className="border-white/20 text-white/60 hover:bg-brand-pink hover:border-brand-pink hover:text-white transition-all rounded-full px-8"
+              onClick={() => setIsSponsorModalOpen(true)}
+            >
+              Sponsor Ol
+            </Button>
           </motion.div>
         </div>
       </div>
@@ -69,6 +79,8 @@ export const Sponsors = () => {
           </motion.div>
         </div>
       </div>
+
+      <SponsorModal isOpen={isSponsorModalOpen} onClose={() => setIsSponsorModalOpen(false)} />
     </section>
   );
 };

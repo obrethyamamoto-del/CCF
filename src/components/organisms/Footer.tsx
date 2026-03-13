@@ -2,15 +2,16 @@
 
 import React from "react";
 import { Typography } from "../atoms/Typography";
-import { Instagram, Twitter, Facebook, Youtube, Coffee } from "lucide-react";
+import { Instagram, Facebook, Youtube, Coffee, Linkedin, Music2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const Footer = () => {
   const socialLinks = [
-    { icon: <Instagram size={20} />, href: "#", label: "Instagram" },
-    { icon: <Twitter size={20} />, href: "#", label: "Twitter" },
-    { icon: <Facebook size={20} />, href: "#", label: "Facebook" },
-    { icon: <Youtube size={20} />, href: "#", label: "Youtube" },
+    { icon: <Instagram size={20} />, href: "https://instagram.com/campuscoffeefest", label: "Instagram" },
+    { icon: <Music2 size={20} />, href: "https://tiktok.com/@campuscoffeefest", label: "TikTok" },
+    { icon: <Linkedin size={20} />, href: "https://linkedin.com/company/campuscoffeefest", label: "LinkedIn" },
+    { icon: <Youtube size={20} />, href: "https://youtube.com/@campuscoffeefest", label: "Youtube" },
+    { icon: <Facebook size={20} />, href: "https://facebook.com/campuscoffeefest", label: "Facebook" },
   ];
 
   return (
@@ -27,8 +28,8 @@ export const Footer = () => {
                 <Coffee className="text-white w-6 h-6" />
               </div>
               <div>
-                <span className="text-2xl font-black tracking-tighter text-white leading-none block">
-                  CAMPUS COFFEE
+                <span className="text-2xl font-black tracking-tighter text-white leading-none block uppercase">
+                  CAMPUSCOFFEE
                 </span>
                 <span className="text-xs uppercase tracking-[0.3em] text-brand-pink font-bold">
                   FEST 2026
@@ -59,7 +60,7 @@ export const Footer = () => {
               Hızlı Erişim
             </Typography>
             <ul className="space-y-4">
-              {["Festival", "Deneyimler", "Sponsorlar", "Takvim", "İletişim"].map((item) => (
+              {["Festival", "Deneyimler", "Takvim", "İletişim"].map((item) => (
                 <li key={item}>
                   <a href={`#${item.toLowerCase()}`} className="text-white/50 hover:text-brand-pink transition-colors duration-300 flex items-center gap-2 group">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-pink scale-0 group-hover:scale-100 transition-transform" />
@@ -70,26 +71,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <Typography variant="body" className="font-black uppercase tracking-widest text-white mb-8">
-              Destek
-            </Typography>
-            <ul className="space-y-4">
-               <li>
-                <a href="#" className="text-white/50 hover:text-white transition-colors">Gizlilik Politikası</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/50 hover:text-white transition-colors">Kullanım Koşulları</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/50 hover:text-white transition-colors">Bilet İade Koşulları</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/50 hover:text-white transition-colors">KVKK Aydınlatma Metni</a>
-              </li>
-            </ul>
-          </div>
+
         </div>
 
         {/* Bottom Bar */}

@@ -4,11 +4,13 @@ import React, { useState, useEffect } from "react";
 import { Coffee, Menu, X } from "lucide-react";
 import { Button } from "../atoms/Button";
 import { motion, AnimatePresence } from "framer-motion";
+import { SponsorModal } from "./SponsorModal";
 
 export const Navbar = () => {
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSponsorModalOpen, setIsSponsorModalOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -22,7 +24,7 @@ export const Navbar = () => {
   const navItems = [
     { name: "Festival", href: "#about" },
     { name: "Deneyimler", href: "#experiences" },
-    { name: "Sponsorlar", href: "#sponsors" },
+    // { name: "Sponsorlar", href: "#sponsors" },
     { name: "Takvim", href: "#program" },
     { name: "İletişim", href: "#contact" },
   ];
@@ -55,7 +57,7 @@ export const Navbar = () => {
             </motion.div>
             <div className="flex flex-col">
               <span className="text-lg font-heading font-black tracking-tighter text-white leading-none">
-                CAMPUS COFFEE
+                CAMPUSCOFFEE
               </span>
               <span className="text-[10px] uppercase tracking-[0.3em] text-brand-blue font-bold opacity-80">
                 FEST 2026
@@ -82,6 +84,7 @@ export const Navbar = () => {
             <Button 
               size="sm" 
               className="hidden sm:flex min-w-[150px] bg-white text-black hover:bg-brand-pink hover:text-white border-none transition-all duration-500"
+              onClick={() => setIsSponsorModalOpen(true)}
             >
               Sponsor Ol
             </Button>
@@ -141,8 +144,11 @@ export const Navbar = () => {
               <div className="mt-auto pt-12 border-t border-white/5">
                 <Button 
                   size="lg" 
-                  className="w-full bg-brand-pink text-white"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                   className="w-full bg-brand-pink text-white"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setIsSponsorModalOpen(true);
+                  }}
                 >
                   Sponsor Ol
                 </Button>
@@ -151,6 +157,8 @@ export const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <SponsorModal isOpen={isSponsorModalOpen} onClose={() => setIsSponsorModalOpen(false)} />
     </>
   );
 };

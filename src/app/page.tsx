@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <About />
       <Experiences />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <Program />
       <Contact />
     </MainLayout>
