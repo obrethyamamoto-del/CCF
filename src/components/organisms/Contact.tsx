@@ -34,7 +34,12 @@ export const Contact = () => {
                   <div className="p-3 bg-white/10 rounded-full"><Phone size={20} /></div>
                   <span className="font-medium">0554 957 46 46</span>
                 </a>
-                <a href="https://instagram.com" className="flex items-center gap-4 hover:translate-x-2 transition-transform">
+                <a 
+                  href="https://instagram.com/campuscoffeefest" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-4 hover:translate-x-2 transition-transform"
+                >
                   <div className="p-3 bg-white/10 rounded-full"><Instagram size={20} /></div>
                   <span className="font-medium">@campuscoffeefest</span>
                 </a>
