@@ -23,22 +23,32 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="p-2.5 bg-brand-pink rounded-2xl shadow-lg shadow-brand-pink/20 flex items-center justify-center relative">
-                <div className="relative">
-                  <Coffee className="text-white w-6 h-6" />
-                  <div className="absolute -top-2 -right-2">
-                    <GraduationCap className="text-brand-blue w-4 h-4 filter drop-shadow-[0_0_2px_rgba(0,0,0,0.5)]" />
+            <div className="flex items-center gap-4 mb-8">
+              <div className="relative">
+                <div className="w-16 h-16 bg-brand-pink rounded-2xl flex items-center justify-center shadow-xl relative z-10 border border-white/20">
+                  <div className="relative">
+                    <Coffee className="text-white w-8 h-8" />
+                    <div className="absolute -top-5 -right-4 rotate-12">
+                      <GraduationCap className="text-brand-blue w-7 h-7 filter drop-shadow-lg" />
+                    </div>
                   </div>
                 </div>
               </div>
-              <div>
-                <span className="text-2xl font-black tracking-tighter text-white leading-none block uppercase">
-                  CAMPUS<span className="text-brand-pink">COFFEE</span>
-                </span>
-                <span className="text-xs uppercase tracking-[0.3em] text-brand-blue font-bold opacity-80">
-                  UNIVERSITY FEST 2026
-                </span>
+              <div className="flex flex-col">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-3xl font-black tracking-tighter text-white leading-none uppercase">
+                    CAMPUS
+                  </span>
+                  <span className="text-3xl font-light tracking-tighter text-brand-pink leading-none uppercase">
+                    COFFEE
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 mt-1">
+                  <div className="h-px w-6 bg-brand-blue/50" />
+                  <span className="text-[10px] uppercase tracking-[0.5em] text-brand-blue font-black">
+                    UNIVERSITY FEST
+                  </span>
+                </div>
               </div>
             </div>
             <Typography variant="body" className="max-w-md text-white/50 mb-8 leading-relaxed">
