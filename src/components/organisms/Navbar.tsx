@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Coffee, Menu, X } from "lucide-react";
+import { Coffee, Menu, X, Instagram, Facebook, Youtube, Linkedin, Music2 } from "lucide-react";
 import { Button } from "../atoms/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { SponsorModal } from "./SponsorModal";
@@ -27,6 +27,14 @@ export const Navbar = () => {
     // { name: "Sponsorlar", href: "#sponsors" },
     { name: "Takvim", href: "#program" },
     { name: "İletişim", href: "#contact" },
+  ];
+
+  const socialLinks = [
+    { icon: <Instagram size={20} />, href: "https://instagram.com/campuscoffeefest", label: "Instagram" },
+    { icon: <Music2 size={20} />, href: "https://tiktok.com/@campuscoffeefest", label: "TikTok" },
+    { icon: <Linkedin size={20} />, href: "https://linkedin.com/company/campuscoffeefest", label: "LinkedIn" },
+    { icon: <Youtube size={20} />, href: "https://youtube.com/@campuscoffeefest", label: "Youtube" },
+    { icon: <Facebook size={20} />, href: "https://facebook.com/campuscoffeefest", label: "Facebook" },
   ];
 
   if (!mounted) return null;
@@ -109,7 +117,7 @@ export const Navbar = () => {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[60] bg-black backdrop-blur-2xl lg:hidden"
           >
-            <div className="flex flex-col h-full p-8">
+            <div className="flex flex-col h-full p-8 overflow-y-auto">
               <div className="flex justify-between items-center mb-16">
                  <div className="flex items-center gap-3">
                   <div className="p-2 bg-brand-pink rounded-xl">
@@ -125,7 +133,7 @@ export const Navbar = () => {
                 </button>
               </div>
 
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-6 mb-12">
                 {navItems.map((item, i) => (
                   <motion.a
                     key={item.name}
@@ -141,10 +149,29 @@ export const Navbar = () => {
                 ))}
               </div>
 
-              <div className="mt-auto pt-12 border-t border-white/5">
+              <div className="mt-auto pt-10 border-t border-white/5 flex flex-col gap-8">
+                <div className="flex flex-col gap-4">
+                  <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.3em]">Bizi Takip Et</span>
+                  <div className="flex gap-3">
+                    {socialLinks.map((social, i) => (
+                      <motion.a
+                        key={i}
+                        href={social.href}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.3 + (i * 0.1) }}
+                        className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white/70 active:scale-95 transition-all"
+                        aria-label={social.label}
+                      >
+                        {social.icon}
+                      </motion.a>
+                    ))}
+                  </div>
+                </div>
+
                 <Button 
                   size="lg" 
-                   className="w-full bg-brand-pink text-white"
+                  className="w-full bg-brand-pink text-white"
                   onClick={() => {
                     setIsMobileMenuOpen(false);
                     setIsSponsorModalOpen(true);
