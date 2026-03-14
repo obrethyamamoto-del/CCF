@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Coffee, Menu, X, Instagram, Facebook, Youtube, Linkedin, Music2 } from "lucide-react";
+import { Coffee, Menu, X, Instagram, Facebook, Youtube, Linkedin, Music2, GraduationCap } from "lucide-react";
 import { Button } from "../atoms/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { SponsorModal } from "./SponsorModal";
@@ -59,16 +59,24 @@ export const Navbar = () => {
           >
             <motion.div 
               whileHover={{ rotate: 15, scale: 1.1 }}
-              className="p-2.5 bg-brand-pink rounded-2xl shadow-lg shadow-brand-pink/30 flex items-center justify-center"
+              className="p-2.5 bg-brand-pink rounded-2xl shadow-lg shadow-brand-pink/30 flex items-center justify-center relative"
             >
-              <Coffee className="text-white w-5 h-5" />
+              <div className="relative">
+                <Coffee className="text-white w-5 h-5" />
+                <motion.div
+                  initial={{ rotate: -15, x: 8, y: -8 }}
+                  className="absolute -top-1.5 -right-1.5"
+                >
+                  <GraduationCap className="text-brand-blue w-3.5 h-3.5 filter drop-shadow-[0_0_2px_rgba(0,0,0,0.5)]" />
+                </motion.div>
+              </div>
             </motion.div>
             <div className="flex flex-col">
               <span className="text-lg font-heading font-black tracking-tighter text-white leading-none">
-                CAMPUSCOFFEE
+                CAMPUS<span className="text-brand-pink">COFFEE</span>
               </span>
               <span className="text-[10px] uppercase tracking-[0.3em] text-brand-blue font-bold opacity-80">
-                FEST 2026
+                UNIVERSITY FEST 2026
               </span>
             </div>
           </div>
@@ -120,10 +128,22 @@ export const Navbar = () => {
             <div className="flex flex-col h-full p-8 overflow-y-auto">
               <div className="flex justify-between items-center mb-16">
                  <div className="flex items-center gap-3">
-                  <div className="p-2 bg-brand-pink rounded-xl">
-                    <Coffee className="text-white w-5 h-5" />
+                  <div className="p-2.5 bg-brand-pink rounded-xl relative">
+                    <div className="relative">
+                      <Coffee className="text-white w-5 h-5" />
+                      <div className="absolute -top-1.5 -right-1.5">
+                        <GraduationCap className="text-brand-blue w-3.5 h-3.5 filter drop-shadow-[0_0_2px_rgba(0,0,0,0.5)]" />
+                      </div>
+                    </div>
                   </div>
-                  <span className="text-sm font-black tracking-widest text-white">MENU</span>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-black tracking-widest text-white leading-none">
+                      CAMPUS<span className="text-brand-pink">COFFEE</span>
+                    </span>
+                    <span className="text-[8px] uppercase tracking-[0.2em] text-brand-blue font-bold opacity-80">
+                      UNIVERSITY FEST
+                    </span>
+                  </div>
                 </div>
                 <button 
                   onClick={() => setIsMobileMenuOpen(false)}

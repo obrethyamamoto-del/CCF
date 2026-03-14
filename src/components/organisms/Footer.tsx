@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Typography } from "../atoms/Typography";
-import { Instagram, Facebook, Youtube, Coffee, Linkedin, Music2 } from "lucide-react";
+import { Instagram, Facebook, Youtube, Coffee, Linkedin, Music2, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const Footer = () => {
@@ -24,15 +24,20 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-8">
-              <div className="p-2.5 bg-brand-pink rounded-2xl shadow-lg shadow-brand-pink/20">
-                <Coffee className="text-white w-6 h-6" />
+              <div className="p-2.5 bg-brand-pink rounded-2xl shadow-lg shadow-brand-pink/20 flex items-center justify-center relative">
+                <div className="relative">
+                  <Coffee className="text-white w-6 h-6" />
+                  <div className="absolute -top-2 -right-2">
+                    <GraduationCap className="text-brand-blue w-4 h-4 filter drop-shadow-[0_0_2px_rgba(0,0,0,0.5)]" />
+                  </div>
+                </div>
               </div>
               <div>
                 <span className="text-2xl font-black tracking-tighter text-white leading-none block uppercase">
-                  CAMPUSCOFFEE
+                  CAMPUS<span className="text-brand-pink">COFFEE</span>
                 </span>
-                <span className="text-xs uppercase tracking-[0.3em] text-brand-pink font-bold">
-                  FEST 2026
+                <span className="text-xs uppercase tracking-[0.3em] text-brand-blue font-bold opacity-80">
+                  UNIVERSITY FEST 2026
                 </span>
               </div>
             </div>
