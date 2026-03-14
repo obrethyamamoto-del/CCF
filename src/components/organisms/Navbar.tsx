@@ -90,7 +90,7 @@ export const Navbar = () => {
               <div className="flex items-center gap-2">
                 <div className="h-px w-4 bg-brand-blue/50" />
                 <span className="text-[9px] uppercase tracking-[0.4em] text-brand-blue font-black">
-                  UNIVERSITY FEST
+                  FEST 2026
                 </span>
               </div>
             </div>
@@ -156,7 +156,7 @@ export const Navbar = () => {
                       CAMPUS<span className="text-brand-pink">COFFEE</span>
                     </span>
                     <span className="text-[8px] uppercase tracking-[0.2em] text-brand-blue font-bold opacity-80">
-                      UNIVERSITY FEST
+                      FEST 2026
                     </span>
                   </div>
                 </div>

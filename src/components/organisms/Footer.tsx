@@ -18,19 +18,25 @@ export const Footer = () => {
     <footer className="relative bg-black pt-24 pb-12 overflow-hidden">
       {/* Decorative top border */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      
+
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-8">
               <div className="relative">
-                <div className="w-16 h-16 bg-brand-pink rounded-2xl flex items-center justify-center shadow-xl relative z-10 border border-white/20">
+                {/* Shield/Crest Background matching Navbar */}
+                <div className="w-16 h-16 bg-brand-pink rounded-2xl rotate-3 absolute inset-0 blur-xl opacity-20" />
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-pink to-[#ff6b9d] rounded-2xl flex items-center justify-center shadow-xl relative z-10 border border-white/20">
                   <div className="relative">
                     <Coffee className="text-white w-8 h-8" />
-                    <div className="absolute -top-5 -right-4 rotate-12">
+                    <motion.div
+                      animate={{ y: [-1, 1, -1] }}
+                      transition={{ repeat: Infinity, duration: 3 }}
+                      className="absolute -top-5 -right-4 rotate-12"
+                    >
                       <GraduationCap className="text-brand-blue w-7 h-7 filter drop-shadow-lg" />
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>
@@ -43,10 +49,10 @@ export const Footer = () => {
                     COFFEE
                   </span>
                 </div>
-                <div className="flex items-center gap-2 mt-1">
+                <div className="flex items-center gap-2">
                   <div className="h-px w-6 bg-brand-blue/50" />
-                  <span className="text-[10px] uppercase tracking-[0.5em] text-brand-blue font-black">
-                    UNIVERSITY FEST
+                  <span className="text-[10px] uppercase tracking-[0.4em] text-brand-blue font-black">
+                    FEST 2026
                   </span>
                 </div>
               </div>
