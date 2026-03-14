@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Typography } from "../atoms/Typography";
-import { Instagram, Facebook, Youtube, Coffee, Linkedin, Music2, GraduationCap } from "lucide-react";
+import { Instagram, Facebook, Youtube, Coffee, Linkedin, Music2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const Footer = () => {
@@ -23,18 +23,15 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-brand-pink rounded-2xl shadow-lg shadow-brand-pink/20 flex items-center justify-center relative">
-                <div className="relative">
-                  <Coffee className="text-white w-6 h-6" />
-                  <GraduationCap className="text-white w-3.5 h-3.5 absolute -top-2 -right-2 opacity-80" />
-                </div>
+            <div className="flex items-center gap-3 mb-8">
+              <div className="p-2.5 bg-brand-pink rounded-2xl shadow-lg shadow-brand-pink/20">
+                <Coffee className="text-white w-6 h-6" />
               </div>
-              <div className="flex flex-col">
-                <span className="text-3xl font-black tracking-tighter text-white leading-none uppercase">
-                  CAMPUS<span className="opacity-40 font-medium italic">COFFEE</span>
+              <div>
+                <span className="text-2xl font-black tracking-tighter text-white leading-none block uppercase">
+                  CAMPUSCOFFEE
                 </span>
-                <span className="text-[12px] uppercase tracking-[0.4em] text-brand-blue font-black mt-2">
+                <span className="text-xs uppercase tracking-[0.3em] text-brand-pink font-bold">
                   FEST 2026
                 </span>
               </div>

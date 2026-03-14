@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Coffee, Menu, X, Instagram, Facebook, Youtube, Linkedin, Music2, GraduationCap } from "lucide-react";
+import { Coffee, Menu, X, Instagram, Facebook, Youtube, Linkedin, Music2 } from "lucide-react";
 import { Button } from "../atoms/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { SponsorModal } from "./SponsorModal";
@@ -58,20 +58,16 @@ export const Navbar = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <motion.div 
-              whileHover={{ rotate: 5, scale: 1.05 }}
-              className="p-2.5 bg-brand-pink rounded-xl shadow-lg shadow-brand-pink/20 flex items-center justify-center relative"
+              whileHover={{ rotate: 15, scale: 1.1 }}
+              className="p-2.5 bg-brand-pink rounded-2xl shadow-lg shadow-brand-pink/30 flex items-center justify-center"
             >
-              <div className="relative">
-                <Coffee className="text-white w-5 h-5" />
-                <GraduationCap className="text-white w-3 h-3 absolute -top-1.5 -right-1.5 opacity-80" />
-              </div>
+              <Coffee className="text-white w-5 h-5" />
             </motion.div>
-            
             <div className="flex flex-col">
-              <span className="text-xl font-black tracking-tighter text-white leading-none">
-                CAMPUS<span className="opacity-60 font-medium italic">COFFEE</span>
+              <span className="text-lg font-heading font-black tracking-tighter text-white leading-none">
+                CAMPUSCOFFEE
               </span>
-              <span className="text-[10px] uppercase tracking-[0.3em] text-brand-blue font-bold opacity-80 mt-1">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-brand-blue font-bold opacity-80">
                 FEST 2026
               </span>
             </div>
@@ -124,20 +120,10 @@ export const Navbar = () => {
             <div className="flex flex-col h-full p-8 overflow-y-auto">
               <div className="flex justify-between items-center mb-16">
                  <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-brand-pink rounded-xl relative">
-                    <div className="relative">
-                      <Coffee className="text-white w-5 h-5" />
-                      <GraduationCap className="text-white w-3 h-3 absolute -top-1.5 -right-1.5 opacity-80" />
-                    </div>
+                  <div className="p-2 bg-brand-pink rounded-xl">
+                    <Coffee className="text-white w-5 h-5" />
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-lg font-black tracking-widest text-white leading-none">
-                      CAMPUS<span className="opacity-60 font-medium italic">COFFEE</span>
-                    </span>
-                    <span className="text-[9px] uppercase tracking-[0.2em] text-brand-blue font-bold opacity-80 mt-1">
-                      FEST 2026
-                    </span>
-                  </div>
+                  <span className="text-sm font-black tracking-widest text-white">MENU</span>
                 </div>
                 <button 
                   onClick={() => setIsMobileMenuOpen(false)}
