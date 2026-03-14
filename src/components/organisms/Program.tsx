@@ -50,7 +50,7 @@ export const Program = () => {
               Festival <span className="gradient-text">Takvimi</span>
             </Typography>
             <Typography variant="body" className="max-w-2xl mx-auto text-white/40 text-lg">
-              İki gün boyunca sürecek olan bu eşsiz deneyimin her anını planladık. Saatleri not etmeyi unutma!
+              Saatleri not etmeyi unutma!
             </Typography>
           </motion.div>
         </div>

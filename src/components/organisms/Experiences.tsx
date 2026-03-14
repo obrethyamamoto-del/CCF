@@ -48,8 +48,8 @@ export const Experiences = () => {
             <Typography variant="title" className="text-4xl md:text-8xl mb-8 leading-tight">
               Seni <span className="gradient-text">Neler Bekliyor?</span>
             </Typography>
-            <Typography variant="body" className="max-w-3xl mx-auto text-white/50 text-lg md:text-2xl font-light">
-              {"Festivalin her metrekaresinde yeni bir keşif, her bardağında farklı bir tutku saklı. Alışılmışın dışına çıkmaya hazır ol."}
+            <Typography variant="body" className="max-w-4xl mx-auto text-white/50 text-lg md:text-2xl font-light">
+              {"Festivalin her metrekaresinde yeni bir keşif, her bardağında farklı bir tutku saklı."}
             </Typography>
           </motion.div>
         </div>
