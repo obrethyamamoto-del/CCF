@@ -24,37 +24,19 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-8">
-              <div className="relative">
-                {/* Shield/Crest Background matching Navbar */}
-                <div className="w-16 h-16 bg-brand-pink rounded-2xl rotate-3 absolute inset-0 blur-xl opacity-20" />
-                <div className="w-16 h-16 bg-gradient-to-br from-brand-pink to-[#ff6b9d] rounded-2xl flex items-center justify-center shadow-xl relative z-10 border border-white/20">
-                  <div className="relative">
-                    <Coffee className="text-white w-8 h-8" />
-                    <motion.div
-                      animate={{ y: [-1, 1, -1] }}
-                      transition={{ repeat: Infinity, duration: 3 }}
-                      className="absolute -top-5 -right-4 rotate-12"
-                    >
-                      <GraduationCap className="text-brand-blue w-7 h-7 filter drop-shadow-lg" />
-                    </motion.div>
-                  </div>
+              <div className="p-3 bg-brand-pink rounded-2xl shadow-lg shadow-brand-pink/20 flex items-center justify-center relative">
+                <div className="relative">
+                  <Coffee className="text-white w-6 h-6" />
+                  <GraduationCap className="text-white w-3.5 h-3.5 absolute -top-2 -right-2 opacity-80" />
                 </div>
               </div>
               <div className="flex flex-col">
-                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-black tracking-tighter text-white leading-none uppercase">
-                    CAMPUS
-                  </span>
-                  <span className="text-3xl font-light tracking-tighter text-brand-pink leading-none uppercase">
-                    COFFEE
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-px w-6 bg-brand-blue/50" />
-                  <span className="text-[10px] uppercase tracking-[0.4em] text-brand-blue font-black">
-                    FEST 2026
-                  </span>
-                </div>
+                <span className="text-3xl font-black tracking-tighter text-white leading-none uppercase">
+                  CAMPUS<span className="opacity-40 font-medium italic">COFFEE</span>
+                </span>
+                <span className="text-[12px] uppercase tracking-[0.4em] text-brand-blue font-black mt-2">
+                  FEST 2026
+                </span>
               </div>
             </div>
             <Typography variant="body" className="max-w-md text-white/50 mb-8 leading-relaxed">

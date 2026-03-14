@@ -54,45 +54,26 @@ export const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <div 
-            className="flex items-center gap-4 cursor-pointer group" 
+            className="flex items-center gap-3 cursor-pointer group" 
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <motion.div 
-              whileHover={{ scale: 1.05 }}
-              className="relative"
+              whileHover={{ rotate: 5, scale: 1.05 }}
+              className="p-2.5 bg-brand-pink rounded-xl shadow-lg shadow-brand-pink/20 flex items-center justify-center relative"
             >
-              {/* Shield/Crest Background */}
-              <div className="w-14 h-14 bg-brand-pink rounded-2xl rotate-3 absolute inset-0 blur-lg opacity-20 group-hover:opacity-40 transition-opacity" />
-              <div className="w-14 h-14 bg-gradient-to-br from-brand-pink to-[#ff6b9d] rounded-2xl flex items-center justify-center shadow-xl relative z-10 border border-white/20">
-                <div className="relative">
-                  <Coffee className="text-white w-7 h-7" />
-                  <motion.div
-                    initial={{ y: 0 }}
-                    animate={{ y: [-1, 1, -1] }}
-                    transition={{ repeat: Infinity, duration: 3 }}
-                    className="absolute -top-4 -right-3 rotate-12"
-                  >
-                    <GraduationCap className="text-brand-blue w-6 h-6 filter drop-shadow-lg" />
-                  </motion.div>
-                </div>
+              <div className="relative">
+                <Coffee className="text-white w-5 h-5" />
+                <GraduationCap className="text-white w-3 h-3 absolute -top-1.5 -right-1.5 opacity-80" />
               </div>
             </motion.div>
             
             <div className="flex flex-col">
-              <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-black tracking-tighter text-white leading-none">
-                  CAMPUS
-                </span>
-                <span className="text-2xl font-light tracking-tighter text-brand-pink leading-none">
-                  COFFEE
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="h-px w-4 bg-brand-blue/50" />
-                <span className="text-[9px] uppercase tracking-[0.4em] text-brand-blue font-black">
-                  FEST 2026
-                </span>
-              </div>
+              <span className="text-xl font-black tracking-tighter text-white leading-none">
+                CAMPUS<span className="opacity-60 font-medium italic">COFFEE</span>
+              </span>
+              <span className="text-[10px] uppercase tracking-[0.3em] text-brand-blue font-bold opacity-80 mt-1">
+                FEST 2026
+              </span>
             </div>
           </div>
 
@@ -146,16 +127,14 @@ export const Navbar = () => {
                   <div className="p-2.5 bg-brand-pink rounded-xl relative">
                     <div className="relative">
                       <Coffee className="text-white w-5 h-5" />
-                      <div className="absolute -top-1.5 -right-1.5">
-                        <GraduationCap className="text-brand-blue w-3.5 h-3.5 filter drop-shadow-[0_0_2px_rgba(0,0,0,0.5)]" />
-                      </div>
+                      <GraduationCap className="text-white w-3 h-3 absolute -top-1.5 -right-1.5 opacity-80" />
                     </div>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-sm font-black tracking-widest text-white leading-none">
-                      CAMPUS<span className="text-brand-pink">COFFEE</span>
+                    <span className="text-lg font-black tracking-widest text-white leading-none">
+                      CAMPUS<span className="opacity-60 font-medium italic">COFFEE</span>
                     </span>
-                    <span className="text-[8px] uppercase tracking-[0.2em] text-brand-blue font-bold opacity-80">
+                    <span className="text-[9px] uppercase tracking-[0.2em] text-brand-blue font-bold opacity-80 mt-1">
                       FEST 2026
                     </span>
                   </div>
