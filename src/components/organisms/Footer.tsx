@@ -79,9 +79,7 @@ export const Footer = () => {
           <Typography variant="caption" className="normal-case text-white/30">
             © 2026 Campus Coffee Fest. Tüm hakları saklıdır.
           </Typography>
-          <div className="flex items-center gap-6">
-             <span className="text-[10px] font-bold text-white/20 uppercase tracking-[0.2em]">Designed by Antigravity AI</span>
-          </div>
+
         </div>
       </div>
     </footer>
